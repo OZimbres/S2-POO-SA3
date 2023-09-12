@@ -15,33 +15,27 @@ public class CalcTemperatura extends JPanel {
         GridBagConstraints elemento = new GridBagConstraints();
 
         // Temperatura de cima
-        elemento.fill = GridBagConstraints.BOTH;
-        elemento.weightx = 4;
-        elemento.weighty = 2;
+        elemento.weightx = 1;
+        elemento.weighty = 3;
         elemento.gridx = 0;
         elemento.gridy = 0;
-        elemento.gridwidth = 4;
-        elemento.gridheight = 1;
+        elemento.fill = GridBagConstraints.BOTH;
         this.add(new TemperaturaTop(), elemento);
 
         // Botão para converter temperatura
-        elemento.fill = GridBagConstraints.HORIZONTAL;
-        elemento.weightx = 2;
-        elemento.weighty = 5;
+        elemento.weightx = 1;
+        elemento.weighty = 1;
         elemento.gridx = 0;
-        elemento.gridy = 0;
-        elemento.gridwidth = 1;
-        elemento.gridheight = 1;
+        elemento.gridy = 1;
+        elemento.fill = GridBagConstraints.BOTH;
         this.add(new JButton("CONVERTER"), elemento);
 
         // Temperatura de baixo
-        elemento.fill = GridBagConstraints.BOTH;
-        elemento.weightx = 4;
-        elemento.weighty = 2;
+        elemento.weightx = 1;
+        elemento.weighty = 3;
         elemento.gridx = 0;
-        elemento.gridy = 1;
-        elemento.gridwidth = 4;
-        elemento.gridheight = 1;
+        elemento.gridy = 2;
+        elemento.fill = GridBagConstraints.BOTH;
         this.add(new TemperaturaBottom(), elemento);
     }
 }
