@@ -1,5 +1,9 @@
 package CalcTemp;
 
-public class TemperaturaTop {
-    
+import javax.swing.JPanel;
+
+public class TemperaturaTop extends JPanel {
+    public TemperaturaTop() {
+        super();
+    }
 }
