@@ -10,5 +10,5 @@ public class TabbedApp extends JTabbedPane {
         this.add("Calculadora",new Calculadora());
         this.add("Conversor Temperatura",new CalcTemperatura());
         this.add("IMC",new CalcIMC());
-    }   
+    }
 }
