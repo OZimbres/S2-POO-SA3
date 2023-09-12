@@ -24,7 +24,7 @@ public class Calculadora extends JPanel {
 
         elemento.fill = GridBagConstraints.BOTH;
         elemento.weightx = 1;
-        elemento.weighty = 9;
+        elemento.weighty = 4;
         elemento.gridx = 0;
         elemento.gridy = 1;
         elemento.gridwidth = 1;
