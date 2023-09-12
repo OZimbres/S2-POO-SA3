@@ -1,6 +1,9 @@
 package CalcTemp;
 
+import java.awt.BorderLayout;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.border.EtchedBorder;
 
 public class TemperaturaBottom extends JPanel {
     public TemperaturaBottom(){
