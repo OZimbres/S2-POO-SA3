@@ -76,11 +76,5 @@ public class CalcIMC extends JPanel {
         } catch (NumberFormatException e) {
             resultadoTextField.setText("Erro");
         }
-    }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            new CalcIMC();
-        });
-    }
+    } 
 }
