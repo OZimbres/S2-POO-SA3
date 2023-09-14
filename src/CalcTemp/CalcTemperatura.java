@@ -27,7 +27,7 @@ public class CalcTemperatura extends JPanel {
         elemento.weighty = 1;
         elemento.gridx = 0;
         elemento.gridy = 1;
-        elemento.fill = GridBagConstraints.BOTH;
+        elemento.fill = GridBagConstraints.NONE;
         this.add(new JButton("CONVERTER"), elemento);
 
         // Temperatura de baixo

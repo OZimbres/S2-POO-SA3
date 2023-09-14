@@ -6,7 +6,7 @@ public class FrameApp extends JFrame {
         this.add(new TabbedApp());
 
         //Setando janela
-        this.setBounds(550, 250, 400, 500);
+        this.setBounds(550, 150, 400, 500);
         this.setDefaultCloseOperation(2);
         this.setVisible(true);
     }

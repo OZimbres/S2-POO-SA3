@@ -1,5 +1,6 @@
 package Calculadora;
 
+import java.awt.Color;
 import java.awt.GridLayout;
 import java.util.ArrayList;
 
@@ -13,14 +14,17 @@ public class Botoes extends JPanel {
             add(new JButton("8"));
             add(new JButton("9"));
             add(new JButton("+"));
+
             add(new JButton("4"));
             add(new JButton("5"));
             add(new JButton("6"));
             add(new JButton("-"));
+
             add(new JButton("1"));
             add(new JButton("2"));
             add(new JButton("3"));
             add(new JButton("*"));
+            
             add(new JButton("0"));
             add(new JButton("."));
             add(new JButton("="));
@@ -35,7 +39,7 @@ public class Botoes extends JPanel {
         this.setLayout(new GridLayout(4,4));
 
         for (JButton botao : botoes) {
-            this.add(botao);
+            this.add(botao).setBackground(Color.WHITE);
         }
     }
 }
