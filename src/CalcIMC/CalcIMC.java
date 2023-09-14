@@ -4,8 +4,6 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.SwingUtilities;
-
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -73,6 +71,7 @@ public class CalcIMC extends JPanel {
             double imc = peso / ((altura / 100) * (altura / 100));
 
             resultadoTextField.setText(String.format("%.2f", imc));
+            
         } catch (NumberFormatException e) {
             resultadoTextField.setText("Erro");
         }
