@@ -29,13 +29,11 @@ public class CalcTempController {
 
         for (int i = 0; i < listaCombinacoes.size(); i++) {
             if(i == 0 || i == 4 || i == 9){
-                int a = 0;
+                
             }
             else if(i == 2){
-                int b = 0;
             }
             else{
-                int c = 0;
             }
         }
     }
