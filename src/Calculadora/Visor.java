@@ -19,7 +19,7 @@ public class Visor extends JPanel {
         visor.setLineWrap(true);
         
         //Definindo a fonte
-        Font font = new Font("Arial", Font.BOLD, 24);
+        Font font = new Font("Arial", Font.BOLD, 40);
         //Setando a fonte no JTextArea
         visor.setFont(font);
 

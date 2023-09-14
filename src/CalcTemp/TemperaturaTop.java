@@ -3,12 +3,14 @@ package CalcTemp;
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 
 import javax.swing.JComboBox;
 import javax.swing.JComponent;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.LineBorder;
@@ -23,9 +25,9 @@ public class TemperaturaTop extends JPanel{
 
     // Componentes controlados pelo CardLayout
     // Criando os cards
-    JPanel cardCelcius = new JPanel();
-    JPanel cardFahrenheit = new JPanel();
-    JPanel cardKelvin = new JPanel();
+    JPanel cardCelcius = new JPanel(new BorderLayout()); //Criou e já declarou qual layout que vai usar
+    JPanel cardFahrenheit = new JPanel(new BorderLayout()); //Criou e já declarou qual layout que vai usar
+    JPanel cardKelvin = new JPanel(new BorderLayout()); //Criou e já declarou qual layout que vai usar
 
     public TemperaturaTop(){
         super();
@@ -34,17 +36,36 @@ public class TemperaturaTop extends JPanel{
 
         // Preenchendo cada Card
         // Tem q ter o casting de tipo pra funcionar ( (JComponent) )
-        JTextArea campo = new JTextArea(); // Criando campo para colocar nos cards
-        campo.setLineWrap(true);
+        JTextArea campoC = new JTextArea(); // Criando campo para colocar nos cards
+        campoC.setLineWrap(true);
+        JTextArea campoF = new JTextArea(); // Criando campo para colocar nos cards
+        campoF.setLineWrap(true);
+        JTextArea campoK = new JTextArea(); // Criando campo para colocar nos cards
+        campoK.setLineWrap(true);
 
-        ((JComponent) cardCelcius.add(campo)).setBorder(new LineBorder(Color.BLACK));
-        cardCelcius.setBorder(new EtchedBorder());
+        //Definindo a fonte
+        Font font = new Font("Arial", Font.BOLD, 40);
+        //Setando a fonte no JTextArea
+        campoC.setFont(font);
+        campoF.setFont(font);
+        campoK.setFont(font);
 
-        ((JComponent) cardFahrenheit.add(new JTextArea(1, 25))).setBorder(new LineBorder(Color.BLACK));
-        cardFahrenheit.setBorder(new EtchedBorder());
+         // Scroll caso o número seja muito grande
+        JScrollPane areaScrollC = new JScrollPane(campoC);
+        JScrollPane areaScrollF = new JScrollPane(campoF);
+        JScrollPane areaScrollK = new JScrollPane(campoK);
 
-        ((JComponent) cardKelvin.add(new JTextArea(1, 35))).setBorder(new LineBorder(Color.BLACK));
-        cardKelvin.setBorder(new EtchedBorder());
+        areaScrollC.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        areaScrollF.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        areaScrollK.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+
+        ((JComponent) cardCelcius.add(areaScrollC)).setBorder(new LineBorder(Color.BLACK));
+
+
+        ((JComponent) cardFahrenheit.add(areaScrollF)).setBorder(new LineBorder(Color.BLACK));
+
+
+        ((JComponent) cardKelvin.add(areaScrollK)).setBorder(new LineBorder(Color.BLACK));
 
         // Criando a caixa de selecão
         caixaSelecao.add(cardCelcius, CELCIUS);

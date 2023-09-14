@@ -2,6 +2,8 @@ package CalcTemp;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -23,12 +25,13 @@ public class CalcTemperatura extends JPanel {
         this.add(new TemperaturaTop(), elemento);
 
         // Botão para converter temperatura
+        JButton converter = new JButton("CONVERTER");
         elemento.weightx = 1;
         elemento.weighty = 1;
         elemento.gridx = 0;
         elemento.gridy = 1;
         elemento.fill = GridBagConstraints.NONE;
-        this.add(new JButton("CONVERTER"), elemento);
+        this.add(converter, elemento);
 
         // Temperatura de baixo
         elemento.weightx = 1;
@@ -37,5 +40,13 @@ public class CalcTemperatura extends JPanel {
         elemento.gridy = 2;
         elemento.fill = GridBagConstraints.BOTH;
         this.add(new TemperaturaBottom(), elemento);
+        
+        // Fazendo a conversão quando clicar no botão
+        converter.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                
+            }
+        });
     }
 }
