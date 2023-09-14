@@ -16,8 +16,8 @@
 
 # Conversor de Temperatura:
 <p>Responsável: Lorenzo</p>
-<p>Layout aplicado: GridLayout, pois é uma ferramenta simples para organizar elementos de forma retangular e responsiva.</p>
-<p>Componentes: </p>
+<p>Layout aplicado: foi aplicado grid x e y para alocar um encima do outro e utilizado fill para ocupar todo espaço  </p>
+<p>Componentes: Foi utilizado GridBag para alocar dois Jpanel junto com um botão dentro do TabbedPane sendo um botão e dois ComboBox </p>
 <p>Funcionalidade: </p>
 
 # Calculadora IMC:
