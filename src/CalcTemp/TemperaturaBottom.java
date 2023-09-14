@@ -1,14 +1,10 @@
 package CalcTemp;
 
 import java.awt.BorderLayout;
-<<<<<<< HEAD
-=======
 import java.awt.CardLayout;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
-
 import javax.swing.JComboBox;
->>>>>>> a2c67f2eb2336a5404f1cb55e4498f51f292cfd8
 import javax.swing.JPanel;
 
 public class TemperaturaBottom extends JPanel implements ItemListener {
