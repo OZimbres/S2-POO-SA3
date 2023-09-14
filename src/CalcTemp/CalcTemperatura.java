@@ -9,6 +9,9 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 public class CalcTemperatura extends JPanel {
+    //Importando a lógica
+    CalcTempController controller = new CalcTempController();
+
     public CalcTemperatura() {
         super();
 
@@ -45,7 +48,7 @@ public class CalcTemperatura extends JPanel {
         converter.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                
+                controller.Converter();
             }
         });
     }

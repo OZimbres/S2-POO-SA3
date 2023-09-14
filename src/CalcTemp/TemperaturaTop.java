@@ -29,6 +29,9 @@ public class TemperaturaTop extends JPanel{
     JPanel cardFahrenheit = new JPanel(new BorderLayout()); //Criou e já declarou qual layout que vai usar
     JPanel cardKelvin = new JPanel(new BorderLayout()); //Criou e já declarou qual layout que vai usar
 
+    // Criando ComboBox
+    public JComboBox comboBox;
+
     public TemperaturaTop(){
         super();
 
@@ -75,7 +78,7 @@ public class TemperaturaTop extends JPanel{
         //Coloca a JComboBox em uma JPanel pra ficar mais bonito
         JPanel comboBoxPane = new JPanel(); //Usar flowlayout
         String comboBoxItens[] = {CELCIUS, FAHRENHEIT, KELVIN};
-        JComboBox comboBox = new JComboBox(comboBoxItens);
+        comboBox = new JComboBox(comboBoxItens);
         comboBox.setEditable(false);
 
         // Funcionalidade para trocar de Item (ao escolher temperatura)
