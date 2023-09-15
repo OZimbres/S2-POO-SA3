@@ -4,6 +4,8 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -49,6 +51,23 @@ public class CalcTemperatura extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 controller.Converter();
+            }
+        });
+
+        // Pegando o foco
+        converter.addFocusListener(new FocusAdapter() {
+            @Override
+            public void focusLost(FocusEvent e){
+                TemperaturaTop tempTop = new TemperaturaTop();
+                System.out.println(tempTop.campoC.getText());
+            }
+        });
+        //Perdendo o foco
+        converter.removeFocusListener(new FocusAdapter(){
+            @Override
+            public void focusLost(FocusEvent e){
+                TemperaturaTop tempTop = new TemperaturaTop();
+                System.out.println(tempTop.campoC.getText());
             }
         });
     }

@@ -32,6 +32,11 @@ public class TemperaturaTop extends JPanel{
     // Criando ComboBox
     public JComboBox comboBox;
 
+    //Criando os campos
+    JTextArea campoC;
+    JTextArea campoF;
+    JTextArea campoK;
+
     public TemperaturaTop(){
         super();
 
@@ -39,11 +44,11 @@ public class TemperaturaTop extends JPanel{
 
         // Preenchendo cada Card
         // Tem q ter o casting de tipo pra funcionar ( (JComponent) )
-        JTextArea campoC = new JTextArea(); // Criando campo para colocar nos cards
+        campoC = new JTextArea(); // Criando campo para colocar nos cards
         campoC.setLineWrap(true);
-        JTextArea campoF = new JTextArea(); // Criando campo para colocar nos cards
+        campoF = new JTextArea(); // Criando campo para colocar nos cards
         campoF.setLineWrap(true);
-        JTextArea campoK = new JTextArea(); // Criando campo para colocar nos cards
+        campoK = new JTextArea(); // Criando campo para colocar nos cards
         campoK.setLineWrap(true);
 
         //Definindo a fonte
