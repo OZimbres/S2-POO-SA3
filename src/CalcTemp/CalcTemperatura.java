@@ -2,11 +2,22 @@ package CalcTemp;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
 public class CalcTemperatura extends JPanel {
+    //Importando a lógica
+    CalcTempController controller = new CalcTempController(new TemperaturaTop(), new TemperaturaBottom());
+
+    // Declarando Objeto
+    TemperaturaTop tempTop = new TemperaturaTop();
+    TemperaturaBottom tempBottom = new TemperaturaBottom();
+
     public CalcTemperatura() {
         super();
 
@@ -20,15 +31,16 @@ public class CalcTemperatura extends JPanel {
         elemento.gridx = 0;
         elemento.gridy = 0;
         elemento.fill = GridBagConstraints.BOTH;
-        this.add(new TemperaturaTop(), elemento);
+        this.add(tempTop, elemento);
 
         // Botão para converter temperatura
+        JButton converter = new JButton("CONVERTER");
         elemento.weightx = 1;
         elemento.weighty = 1;
         elemento.gridx = 0;
         elemento.gridy = 1;
         elemento.fill = GridBagConstraints.NONE;
-        this.add(new JButton("CONVERTER"), elemento);
+        this.add(converter, elemento);
 
         // Temperatura de baixo
         elemento.weightx = 1;
@@ -36,6 +48,77 @@ public class CalcTemperatura extends JPanel {
         elemento.gridx = 0;
         elemento.gridy = 2;
         elemento.fill = GridBagConstraints.BOTH;
-        this.add(new TemperaturaBottom(), elemento);
+        this.add(tempBottom, elemento);
+        
+        // Fazendo a conversão quando clicar no botão
+        converter.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //Pegando o tipo de temperatura ativa
+                String opcaoTop = tempTop.comboBox.getSelectedItem().toString();
+                String opcaoBottom = tempBottom.comboBox.getSelectedItem().toString();
+
+                String resultado;
+
+                switch (opcaoTop) {
+                    case "CELCIUS":
+                        String valorCampoC = tempTop.campoC.getText();
+                        resultado = controller.Converter(opcaoTop, opcaoBottom, valorCampoC);
+                        
+                        switch(opcaoBottom){
+                            case "CELCIUS":
+                                tempBottom.campoC.setText(resultado);
+                                break;
+
+                            case "FAHRENHEIT":
+                                tempBottom.campoF.setText(resultado);
+                                break;
+
+                            case "KELVIN":
+                                tempBottom.campoK.setText(resultado);
+                                break;
+                        }
+                        break;
+
+                    case "FAHRENHEIT":
+                        String valorCampoF = tempTop.campoF.getText();
+                        resultado = controller.Converter(opcaoTop, opcaoBottom, valorCampoF);
+                        
+                        switch(opcaoBottom){
+                            case "CELCIUS":
+                                tempBottom.campoC.setText(resultado);
+                                break;
+
+                            case "FAHRENHEIT":
+                                tempBottom.campoF.setText(resultado);
+                                break;
+
+                            case "KELVIN":
+                                tempBottom.campoK.setText(resultado);
+                                break;
+                        }
+                        break;
+
+                    case "KELVIN":
+                        String valorCampoK = tempTop.campoK.getText();
+                        resultado = controller.Converter(opcaoTop, opcaoBottom, valorCampoK);
+                        
+                        switch(opcaoBottom){
+                            case "CELCIUS":
+                                tempBottom.campoC.setText(resultado);
+                                break;
+
+                            case "FAHRENHEIT":
+                                tempBottom.campoF.setText(resultado);
+                                break;
+
+                            case "KELVIN":
+                                tempBottom.campoK.setText(resultado);
+                                break;
+                        }
+                        break;
+                }
+            }
+        });
     }
 }
