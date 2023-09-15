@@ -1,8 +1,5 @@
 package CalcTemp;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 public class CalcTempController {
     // Pegando informações
     TemperaturaTop tempTop;
