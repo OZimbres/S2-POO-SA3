@@ -43,13 +43,13 @@ public class TemperaturaTop extends JPanel{
 
         // Preenchendo cada Card
         // Tem q ter o casting de tipo pra funcionar ( (JComponent) )
-        campoC = new JTextArea(); // Criando campo para colocar nos cards
+        campoC = new JTextArea(new LimitedDocument(32)); // Criando campo para colocar nos cards
         campoC.setLineWrap(true);
 
-        campoF = new JTextArea(); // Criando campo para colocar nos cards
+        campoF = new JTextArea(new LimitedDocument(32)); // Criando campo para colocar nos cards
         campoF.setLineWrap(true);
 
-        campoK = new JTextArea(); // Criando campo para colocar nos cards
+        campoK = new JTextArea(new LimitedDocument(32)); // Criando campo para colocar nos cards
         campoK.setLineWrap(true);
 
         //Definindo a fonte

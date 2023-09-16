@@ -66,7 +66,7 @@ public class CalcTempController {
                 try {
                     temperatura = Float.parseFloat(textoCampo);
                 } catch (NumberFormatException e) {
-                    System.out.println(tempTop.campoC.getText());
+                    System.out.println("Erro ao converter para float: "+ e.getMessage());
                 }
             }
             else{
@@ -78,7 +78,7 @@ public class CalcTempController {
                 try {
                     temperatura = Float.parseFloat(textoCampo);
                 } catch (NumberFormatException e) {
-                    System.out.println(tempTop.campoF.getText());
+                    System.out.println("Erro ao converter para float: "+ e.getMessage());
                 }
             }
         } else {
@@ -87,7 +87,7 @@ public class CalcTempController {
                 try {
                     temperatura = Float.parseFloat(textoCampo);
                 } catch (NumberFormatException e) {
-                    System.out.println(tempTop.campoK.getText());
+                    System.out.println("Erro ao converter para float: "+ e.getMessage());
                 }
             }
         }
@@ -98,7 +98,7 @@ public class CalcTempController {
     public String CelciusToFahrenheit(String TempOriginal){
         float tempOriginal = Float.parseFloat(TempOriginal); // tranforma de string pra float pra calcular
 
-        float tempCalculada = (tempOriginal * (9 / 5)) + 32; // fórmula
+        float tempCalculada = (tempOriginal * 9 / 5) + 32; // fórmula
 
         return String.valueOf(tempCalculada); //retorn Retorna como string (faz a conversão aqui mesmo)
     }
@@ -114,7 +114,7 @@ public class CalcTempController {
     public String FahrenheitToCelcius(String TempOriginal){
         float tempOriginal = Float.parseFloat(TempOriginal); // tranforma de string pra float pra calcular
 
-        float tempCalculada = (tempOriginal - 32) * (5 / 9); // fórmula
+        float tempCalculada = (tempOriginal - 32) * 5 / 9; // fórmula
 
         return String.valueOf(tempCalculada); //retorn Retorna como string (faz a conversão aqui mesmo)
     }
@@ -122,7 +122,7 @@ public class CalcTempController {
     public String FahrenheitToKelvin(String TempOriginal){
         float tempOriginal = Float.parseFloat(TempOriginal); // tranforma de string pra float pra calcular
 
-        float tempCalculada = (tempOriginal - 32) * (5 / 9) + 273.15f; // fórmula
+        float tempCalculada = ((tempOriginal - 32) * 5 / 9) + 273.15f; // fórmula
 
         return String.valueOf(tempCalculada); //retorn Retorna como string (faz a conversão aqui mesmo)
     }
@@ -138,7 +138,7 @@ public class CalcTempController {
     public String KelvinToFahrenheit(String TempOriginal){
         float tempOriginal = Float.parseFloat(TempOriginal); // tranforma de string pra float pra calcular
 
-        float tempCalculada = (tempOriginal - 273.15f) * (9 / 5) + 32; // fórmula
+        float tempCalculada = ((tempOriginal - 273.15f) * 9 / 5) + 32; // fórmula
 
         return String.valueOf(tempCalculada); //retorn Retorna como string (faz a conversão aqui mesmo)
     }

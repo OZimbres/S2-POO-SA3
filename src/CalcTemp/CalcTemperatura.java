@@ -52,70 +52,77 @@ public class CalcTemperatura extends JPanel {
         converter.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //Pegando o tipo de temperatura ativa
-                String opcaoTop = tempTop.comboBox.getSelectedItem().toString();
-                String opcaoBottom = tempBottom.comboBox.getSelectedItem().toString();
+                try {
+                    
+                    //Pegando o tipo de temperatura ativa
+                    String opcaoTop = tempTop.comboBox.getSelectedItem().toString();
+                    String opcaoBottom = tempBottom.comboBox.getSelectedItem().toString();
 
-                String resultado;
+                    String resultado;
 
-                switch (opcaoTop) {
-                    case "CELCIUS":
-                        String valorCampoC = tempTop.campoC.getText();
-                        resultado = controller.Converter(opcaoTop, opcaoBottom, valorCampoC);
-                        
-                        switch(opcaoBottom){
-                            case "CELCIUS":
-                                tempBottom.campoC.setText(resultado);
-                                break;
+                    switch (opcaoTop) {
+                        case "CELCIUS":
+                            String valorCampoC = tempTop.campoC.getText();
+                            resultado = controller.Converter(opcaoTop, opcaoBottom, valorCampoC);
+                            
+                            switch(opcaoBottom){
+                                case "CELCIUS":
+                                    tempBottom.campoC.setText(resultado);
+                                    break;
 
-                            case "FAHRENHEIT":
-                                tempBottom.campoF.setText(resultado);
-                                break;
+                                case "FAHRENHEIT":
+                                    tempBottom.campoF.setText(resultado);
+                                    break;
 
-                            case "KELVIN":
-                                tempBottom.campoK.setText(resultado);
-                                break;
-                        }
-                        break;
+                                case "KELVIN":
+                                    tempBottom.campoK.setText(resultado);
+                                    break;
+                            }
+                            break;
 
-                    case "FAHRENHEIT":
-                        String valorCampoF = tempTop.campoF.getText();
-                        resultado = controller.Converter(opcaoTop, opcaoBottom, valorCampoF);
-                        
-                        switch(opcaoBottom){
-                            case "CELCIUS":
-                                tempBottom.campoC.setText(resultado);
-                                break;
+                        case "FAHRENHEIT":
+                            String valorCampoF = tempTop.campoF.getText();
+                            resultado = controller.Converter(opcaoTop, opcaoBottom, valorCampoF);
+                            
+                            switch(opcaoBottom){
+                                case "CELCIUS":
+                                    tempBottom.campoC.setText(resultado);
+                                    break;
 
-                            case "FAHRENHEIT":
-                                tempBottom.campoF.setText(resultado);
-                                break;
+                                case "FAHRENHEIT":
+                                    tempBottom.campoF.setText(resultado);
+                                    break;
 
-                            case "KELVIN":
-                                tempBottom.campoK.setText(resultado);
-                                break;
-                        }
-                        break;
+                                case "KELVIN":
+                                    tempBottom.campoK.setText(resultado);
+                                    break;
+                            }
+                            break;
 
-                    case "KELVIN":
-                        String valorCampoK = tempTop.campoK.getText();
-                        resultado = controller.Converter(opcaoTop, opcaoBottom, valorCampoK);
-                        
-                        switch(opcaoBottom){
-                            case "CELCIUS":
-                                tempBottom.campoC.setText(resultado);
-                                break;
+                        case "KELVIN":
+                            String valorCampoK = tempTop.campoK.getText();
+                            resultado = controller.Converter(opcaoTop, opcaoBottom, valorCampoK);
+                            
+                            switch(opcaoBottom){
+                                case "CELCIUS":
+                                    tempBottom.campoC.setText(resultado);
+                                    break;
 
-                            case "FAHRENHEIT":
-                                tempBottom.campoF.setText(resultado);
-                                break;
+                                case "FAHRENHEIT":
+                                    tempBottom.campoF.setText(resultado);
+                                    break;
 
-                            case "KELVIN":
-                                tempBottom.campoK.setText(resultado);
-                                break;
-                        }
-                        break;
+                                case "KELVIN":
+                                    tempBottom.campoK.setText(resultado);
+                                    break;
+                            }
+                            break;
+                    }
+
+                } catch (Exception exception){
+                    System.out.println("Ocorreu um erro: "+ exception.getMessage());
                 }
+                
             }
         });
     }
