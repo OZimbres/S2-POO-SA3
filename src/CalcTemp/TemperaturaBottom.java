@@ -96,6 +96,11 @@ public class TemperaturaBottom extends JPanel{
             public void itemStateChanged(ItemEvent evt) {
                 CardLayout cl = (CardLayout)(caixaSelecao.getLayout());
                 cl.show(caixaSelecao, (String)evt.getItem());
+
+                // Limpa o conteúdo do JTextArea ao mudar de item
+                campoC.setText("");
+                campoF.setText("");
+                campoK.setText("");
             }
         });
 
