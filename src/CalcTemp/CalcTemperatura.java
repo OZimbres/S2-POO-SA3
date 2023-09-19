@@ -120,7 +120,9 @@ public class CalcTemperatura extends JPanel {
                     }
 
                 } catch (Exception exception){
-                    System.out.println("Ocorreu um erro: "+ exception.getMessage());
+                    tempBottom.campoC.setText("Insira um valor válido");
+                    tempBottom.campoF.setText("Insira um valor válido");
+                    tempBottom.campoK.setText("Insira um valor válido");
                 }
                 
             }

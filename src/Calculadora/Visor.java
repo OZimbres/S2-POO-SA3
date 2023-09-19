@@ -10,29 +10,36 @@ import javax.swing.JTextArea;
 import javax.swing.border.EtchedBorder;
 
 public class Visor extends JPanel {
+    JTextArea visorTextArea; // JTextArea pra exibir o texto
+
     public Visor() {
         super();
 
         this.setLayout(new BorderLayout());
 
-        JTextArea visor = new JTextArea();
-        visor.setLineWrap(true);
+        visorTextArea = new JTextArea();
+        visorTextArea.setLineWrap(true);
         
         //Definindo a fonte
         Font font = new Font("Arial", Font.BOLD, 40);
         //Setando a fonte no JTextArea
-        visor.setFont(font);
+        visorTextArea.setFont(font);
 
         //Setando pra escrever da direita para a esquerda
-        visor.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
+        visorTextArea.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
 
         // Scroll caso o número seja muito grande
-        JScrollPane areaScroll = new JScrollPane(visor);
+        JScrollPane areaScroll = new JScrollPane(visorTextArea);
         // Definindo o tipo de scroll
         areaScroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
 
         this.add(areaScroll);
 
         this.setBorder(new EtchedBorder());
+    }
+
+    // Método pra adicionar ao visor
+    public void adicionarTexto(String texto){
+        visorTextArea.append(texto);
     }
 }
