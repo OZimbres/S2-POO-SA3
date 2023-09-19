@@ -151,7 +151,7 @@ public class Botoes extends JPanel {
     private void Decisao(String pressionado){
         float numero;
 
-        String opcoes[] = {"+", "-", "*", "/", ".", "="};
+        String opcoes[] = {"+", "-", "*", "/"};
 
         // Evitar nullPointerException
         String conteudoVisor = visorTextArea.getText();
