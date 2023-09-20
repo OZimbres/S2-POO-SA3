@@ -1,0 +1,5 @@
+#! /bin/sh
+set -e
+# Copia o arquivo .jar pra área de trabalho do usuário
+cp /usr/share/OZimbresCalculadoras.jar ~/Área\ de\ Trabalho/
+exit 0
