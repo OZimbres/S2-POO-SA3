@@ -5,6 +5,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,7 +19,7 @@ public class CalcIMC extends JPanel {
         // Criação dos painéis
         JPanel painelPrincipal = new JPanel(new BorderLayout()); // Border Layout
         JPanel painelBotoes = new JPanel();
-        JPanel painelInputs = new JPanel(new GridLayout(1, 1));
+        JPanel painelInputs = new JPanel(new GridLayout(2, 2));
         JPanel painelResultado = new JPanel(new GridLayout(1,1));
         JLabel pesoLabel = new JLabel("Peso (kg):");
         JLabel alturaLabel = new JLabel("Altura (cm):");
@@ -29,6 +30,8 @@ public class CalcIMC extends JPanel {
         resultadoTextField = new JTextField();
         resultadoTextField.setEditable(false);
         calcularButton = new JButton("Calcular");
+        calcularButton.setBackground(Color.DARK_GRAY);
+        calcularButton.setForeground(Color.WHITE);
 
         // adicionando os componentes aos painéis
         painelInputs.add(alturaLabel);
