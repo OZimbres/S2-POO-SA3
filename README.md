@@ -21,10 +21,10 @@
 <p>Funcionalidade: Converte as temperaturas baseando-se nas opções escolhidas </p>
 
 # Calculadora IMC:
-<p>Responsável: </p>
-<p>Layout Aplicado:  </p>
-<p>Componentes: </p>
-<p>Funcionalidade: </p>
+<p>Responsável: Matheus Rodrigues da Silva </p>
+<p>Layout Aplicado: Foi aplicado quatro Jpanel um para o principal outro para o botão, outro para os inputs e um para o resultado, sendo input north, botoes center, resultado south  </p>
+<p>Componentes: altura label, altura text field, peso label, peso textfield, calcular button, resultado textfield </p>
+<p>Funcionalidade: mostrar o IMC da pessoa em questão  </p>
 
 # Experiência de aprendizado
 <p>Nesta atividade, praticamos os conceitos aprendidos em aula, além de buscar por conta própria por novas informações e ferramentas, assim dando uma oportunidade de nós alunos descobrirmos novas ferramentas e métodos para a realização do projeto.</p>
