@@ -12,7 +12,6 @@ import javax.swing.JComponent;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
-import javax.swing.border.EtchedBorder;
 import javax.swing.border.LineBorder;
 
 public class TemperaturaTop extends JPanel{
@@ -30,7 +29,12 @@ public class TemperaturaTop extends JPanel{
     JPanel cardKelvin = new JPanel(new BorderLayout()); //Criou e já declarou qual layout que vai usar
 
     // Criando ComboBox
-    public JComboBox comboBox;
+    public JComboBox<String> comboBox;
+
+    //Criando os campos
+    JTextArea campoC;
+    JTextArea campoF;
+    JTextArea campoK;
 
     public TemperaturaTop(){
         super();
@@ -39,11 +43,13 @@ public class TemperaturaTop extends JPanel{
 
         // Preenchendo cada Card
         // Tem q ter o casting de tipo pra funcionar ( (JComponent) )
-        JTextArea campoC = new JTextArea(); // Criando campo para colocar nos cards
+        campoC = new JTextArea(new LimitedDocument(32, "Temp")); // Criando campo para colocar nos cards
         campoC.setLineWrap(true);
-        JTextArea campoF = new JTextArea(); // Criando campo para colocar nos cards
+
+        campoF = new JTextArea(new LimitedDocument(32, "Temp")); // Criando campo para colocar nos cards
         campoF.setLineWrap(true);
-        JTextArea campoK = new JTextArea(); // Criando campo para colocar nos cards
+
+        campoK = new JTextArea(new LimitedDocument(32, "Temp")); // Criando campo para colocar nos cards
         campoK.setLineWrap(true);
 
         //Definindo a fonte
@@ -78,7 +84,7 @@ public class TemperaturaTop extends JPanel{
         //Coloca a JComboBox em uma JPanel pra ficar mais bonito
         JPanel comboBoxPane = new JPanel(); //Usar flowlayout
         String comboBoxItens[] = {CELCIUS, FAHRENHEIT, KELVIN};
-        comboBox = new JComboBox(comboBoxItens);
+        comboBox = new JComboBox<String>(comboBoxItens);
         comboBox.setEditable(false);
 
         // Funcionalidade para trocar de Item (ao escolher temperatura)

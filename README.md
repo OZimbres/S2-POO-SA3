@@ -9,22 +9,22 @@
 <p>A escolha do layout adequado é fundamental para criar interfaces de usuário eficazes e agradáveis em Java. <br> Cada layout tem seus pontos positivos e negativos, assim sendo necessário analisar o projeto e decidir quais as melhores opções. <br> Para decidir quais as melhores opções, deve-se considerar a usabilidade, a organização, a adaptabilidade, estética, responsividade e manutenção do projeto.</p>
 
 # Calculadora:
-<p>Responsável: Matheus Rodrigues da Silva</p>
-<p>Layout aplicado: Foi utilizado o GridBag para organizar os elementos no frame, pois utiliza a posição em grid x e y para determinar a posição dos elementos na tela</p>
-<p>Componentes: Foi utilizado dois GridBag onde um fica alocado o visor e o outro as teclas da calculadora</p>
-<p>Funcionalidade: em desenvolvimento</p>
+<p>Responsável: Lorenzo Oliveira Zimbres</p>
+<p>Layout aplicado: Foi utilizado o GridBagLayout para organizar os elementos Visor e Botões no frame, pois utiliza a posição em grid x e y para determinar a posição dos elementos na tela</p>
+<p>Componentes: Visor - Painel contendo um JTextArea para a exibição dos cálculos; Botões - GridBagLayout para a orgaização dos botões da calculadora</p>
+<p>Funcionalidade: Quatro operações básicas da matemática; CLEAR - Limpar campo/histórico; DEL - Remover último caractere inserido</p>
 
 # Conversor de Temperatura:
 <p>Responsável: Lorenzo</p>
-<p>Layout aplicado: GridLayout, pois é uma ferramenta simples para organizar elementos de forma retangular e responsiva.</p>
-<p>Componentes: </p>
-<p>Funcionalidade: </p>
+<p>Layout aplicado: Foi aplicado GridBagLayout para organizar os elementos (Campo de cima, campo de baixo e botão de conversão), pois ele organiza os elementos como se fossem colunas, utilizando gridx e y e weightx e y</p>
+<p>Componentes: TemperaturaTop / TemperaturaBottom - Contém ComboBox para criar um caixa de seleção com as temperaturas dísponiveis (em ambos os campos) que exibem os campos JTextArea para a exibição das temperaturas (cálculo e input do usuário)</p>
+<p>Funcionalidade: Converte as temperaturas baseando-se nas opções escolhidas </p>
 
 # Calculadora IMC:
-<p>Responsável: </p>
-<p>Layout Aplicado:  </p>
-<p>Componentes: </p>
-<p>Funcionalidade: </p>
+<p>Responsável: Matheus Rodrigues da Silva </p>
+<p>Layout Aplicado: Foi aplicado quatro Jpanel um para o principal outro para o botão, outro para os inputs e um para o resultado, sendo input north, botoes center, resultado south  </p>
+<p>Componentes: altura label, altura text field, peso label, peso textfield, calcular button, resultado textfield </p>
+<p>Funcionalidade: mostrar o IMC da pessoa em questão  </p>
 
 # Experiência de aprendizado
 <p>Nesta atividade, praticamos os conceitos aprendidos em aula, além de buscar por conta própria por novas informações e ferramentas, assim dando uma oportunidade de nós alunos descobrirmos novas ferramentas e métodos para a realização do projeto.</p>
