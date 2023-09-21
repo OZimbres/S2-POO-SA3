@@ -18,7 +18,7 @@ public class CalcIMC extends JPanel {
         // Criação dos painéis
         JPanel painelPrincipal = new JPanel(new BorderLayout()); // Border Layout
         JPanel painelBotoes = new JPanel();
-        JPanel painelInputs = new JPanel(new GridLayout(1, 1));
+        JPanel painelInputs = new JPanel(new GridLayout(2, 2));
         JPanel painelResultado = new JPanel(new GridLayout(1,1));
         JLabel pesoLabel = new JLabel("Peso (kg):");
         JLabel alturaLabel = new JLabel("Altura (cm):");
