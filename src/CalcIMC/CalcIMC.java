@@ -20,7 +20,7 @@ public class CalcIMC extends JPanel {
         JPanel painelBotoes = new JPanel();
         JPanel painelInputs = new JPanel(new GridLayout(1, 1));
         JPanel painelResultado = new JPanel();
-
+        resultadoTextField.setEditable(false);
         JLabel pesoLabel = new JLabel("Peso (kg):");
         JLabel alturaLabel = new JLabel("Altura (cm):");
         JLabel resultadoLabel = new JLabel("IMC:");
@@ -33,12 +33,9 @@ public class CalcIMC extends JPanel {
         // adicionando os componentes aos painéis
         painelInputs.add(alturaLabel);
         painelInputs.add(alturaTextField);
-
         painelInputs.add(pesoLabel);
         painelInputs.add(pesoTextField);
-
         painelBotoes.add(calcularButton);
-
         painelResultado.add(resultadoLabel);
         painelResultado.add(resultadoTextField);
 
