@@ -4,7 +4,6 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -15,6 +14,12 @@ public class CalcIMC extends JPanel {
     private JButton calcularButton;
 
     public CalcIMC() {
+
+        // Criação dos painéis
+        JPanel painelPrincipal = new JPanel(new BorderLayout()); // Border Layout
+        JPanel painelBotoes = new JPanel();
+        JPanel painelInputs = new JPanel(new GridLayout(1, 1));
+        JPanel painelResultado = new JPanel();
         JLabel pesoLabel = new JLabel("Peso (kg):");
         JLabel alturaLabel = new JLabel("Altura (cm):");
         JLabel resultadoLabel = new JLabel("IMC:");
@@ -22,31 +27,14 @@ public class CalcIMC extends JPanel {
         pesoTextField = new JTextField();
         alturaTextField = new JTextField();
         resultadoTextField = new JTextField();
-        resultadoTextField.setEditable(false);
         calcularButton = new JButton("Calcular");
-
-        
-        // Criação dos painéis
-        JPanel painelPrincipal = new JPanel(new BorderLayout()); // Border Layout
-        // this.add(painelPrincipal);
-        JPanel painelBotoes = new JPanel();
-        // this.add(painelBotoes);
-        JPanel painelInputs = new JPanel(new GridLayout(4, 4));
-        // this.add(painelInputs);
-        JPanel painelResultado = new JPanel();
-        // this.add(painelResultado);
 
         // adicionando os componentes aos painéis
         painelInputs.add(alturaLabel);
-        // painelInputs.add(new JLabel(""));
         painelInputs.add(alturaTextField);
-
         painelInputs.add(pesoLabel);
-        // painelInputs.add(new JLabel(""));
         painelInputs.add(pesoTextField);
-
         painelBotoes.add(calcularButton);
-
         painelResultado.add(resultadoLabel);
         painelResultado.add(resultadoTextField);
 
@@ -72,6 +60,9 @@ public class CalcIMC extends JPanel {
             double imc = peso / ((altura / 100) * (altura / 100));
 
             resultadoTextField.setText(String.format("%.2f", imc));
+            resultadoTextField.setVisible(true);
+            resultadoTextField.setEditable(false);
+            
         } catch (NumberFormatException e) {
             resultadoTextField.setText("Erro");
         }
